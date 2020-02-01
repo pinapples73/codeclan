@@ -1,0 +1,15 @@
+<form method="post" action="/artwork/<%=@artwork.id%>/update">
+  <label for="title">Title:</label>
+  <input id="title" type="text" name="title" value="<%= @artwork.title %>" />
+  <label for="details">Details:</label>
+  <input id="details" type="text" name="details" value="<%= @artwork.details%>" />
+  <label for="date_created">Date created:</label>
+  <input id="date_created" type="text" name="date_created" value="<%= @artwork.date_created %>"/>
+  <label for="arist-select">Assign an Artist:</label>
+  <select id="artist-select" name="artist_id">
+    <%for artist in @artists%>
+      <option <%= "selected" if @artwork.artist_id == artist.id %> value="<%=artist.id%>"><%=artist.first_name.capitalize%> <%=artist.last_name.capitalize%> </option>
+    <% end %>
+  </select>
+  <input type="submit"  value="Edit Artwork">
+</form>
