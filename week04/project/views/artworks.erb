@@ -3,11 +3,16 @@
 <form method="get" action="/artwork/find">
   <label for="artist-select">Filter by artist:</label>
   <select id="art-by-artist-select" name="artist_id">
+    <!-- <option value="" selected disabled></option> -->
     <%for artist in @artists%>
-      <option value="<%=artist.id%>"><%=artist.last_name.capitalize%>, <%=artist.first_name.capitalize%>  </option>
+      <option value="<%=artist.id%>"> <%=artist.last_name.capitalize%>, <%=artist.first_name.capitalize%>  </option>
       <% end %>
     </select>
     <input type="submit"  value="Filter by Artist">
+</form>
+
+<form method="get" action="/artwork/all">
+    <input type="submit"  value="Show All">
 </form>
 
 <%  for artwork in @artworks %>

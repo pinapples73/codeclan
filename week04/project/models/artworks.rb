@@ -34,14 +34,15 @@ class Artwork
     sql = 'SELECT * FROM artworks ORDER BY artist_id'
     artworks_data = SqlRunner.run(sql)
     @results = artworks_data.map { |artwork| Artwork.new(artwork) }
-    p @results
+    return @results
   end
 
   def self.find(id)
     sql = "SELECT * FROM artworks WHERE id = $1"
     values = [id]
     artworks_data = SqlRunner.run(sql, values)
-    return artworks_data.map { |artwork| Artwork.new(artwork) }
+    @results = artworks_data.map { |artwork| Artwork.new(artwork) }
+    return @results
   end
 
   def self.find_by_artist(id)

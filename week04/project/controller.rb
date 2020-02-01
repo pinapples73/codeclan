@@ -9,6 +9,7 @@ also_reload( 'models/*' )
 
 # set up route to home page
 get '/index' do
+  @artist_id = 0
   @artworks = Artwork.show_all
   @artists = Artist.show_all
   erb ( :artworks )
@@ -41,7 +42,6 @@ end
 
 get '/artwork/find' do
   id = params[:artist_id]
-  # binding.pry
   @artworks = Artwork.find_by_artist(id)
   @artists = Artist.show_all
   erb(:artworks)
@@ -51,7 +51,6 @@ end
 # set up route to delete artists form database
 post '/artist/:id/delete' do
   artist_id = params[:id]
-  # Artwork.delete_by_artist(artist_id)
   Artist.delete(artist_id)
   redirect '/admin'
 end
