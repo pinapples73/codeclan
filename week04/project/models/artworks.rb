@@ -1,6 +1,6 @@
 class Artwork
 
-  attr_reader(:id, :title, :details, :date_created, :artist_id)
+  attr_reader(:id, :title, :details, :date_created, :artist_id, :category_id)
 
   require_relative('../db/sql_runner.rb')
 
@@ -10,11 +10,12 @@ class Artwork
     @details = options['details']
     @date_created = options['date_created']
     @artist_id = options['artist_id'].to_i
+    @category_id = options['category_id'].to_i
   end
 
   def save
-    sql = 'INSERT INTO artworks (title, details, date_created, artist_id) VALUES ($1, $2, $3, $4) RETURNING *'
-    values = [@title, @details, @date_created, @artist_id]
+    sql = 'INSERT INTO artworks (title, details, date_created, artist_id, category_id) VALUES ($1, $2, $3, $4, $5) RETURNING *'
+    values = [@title, @details, @date_created, @artist_id, @category_id]
     returned_data = SqlRunner.run(sql, values)
     @id = returned_data[0]['id'].to_i
   end
@@ -41,8 +42,7 @@ class Artwork
     sql = "SELECT * FROM artworks WHERE id = $1"
     values = [id]
     artworks_data = SqlRunner.run(sql, values)
-    @results = artworks_data.map { |artwork| Artwork.new(artwork) }
-    return @results
+    return Artwork.new(artworks_data.first)
   end
 
   def self.find_by_artist(id)
@@ -60,9 +60,9 @@ class Artwork
   end
 
   def update()
-    sql = "UPDATE artworks SET (title, details, date_created, artist_id) =
-    ($1, $2, $3, $4) WHERE id = $5"
-    values = [@title, @details, @date_created, @artist_id, @id]
+    sql = "UPDATE artworks SET (title, details, date_created, artist_id, category_id) =
+    ($1, $2, $3, $4, $5) WHERE id = $6"
+    values = [@title, @details, @date_created, @artist_id, @category_id, @id]
     SqlRunner.run(sql, values)
   end
 

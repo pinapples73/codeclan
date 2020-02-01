@@ -3,19 +3,22 @@ require( 'sinatra/contrib/all' )
 require( 'pry-byebug' )
 
 require_relative( 'models/artists.rb' )
+require_relative( 'models/categories.rb' )
 require_relative( 'models/artworks.rb' )
+
 
 also_reload( 'models/*' )
 
 # set up route to home page
 get '/index' do
-  @artist_id = 0
+  @categories = Category.show_all
   @artworks = Artwork.show_all
   @artists = Artist.show_all
   erb ( :artworks )
 end
 
 get '/artwork/all' do
+  @categories = Category.show_all
   @artworks = Artwork.show_all
   @artists = Artist.show_all
   erb ( :artworks )
@@ -25,6 +28,7 @@ end
 get '/admin' do
   @artworks = Artwork.show_all
   @artists = Artist.show_all
+  @categories = Category.show_all
   erb ( :admin )
 end
 
@@ -44,6 +48,7 @@ get '/artwork/find' do
   id = params[:artist_id]
   @artworks = Artwork.find_by_artist(id)
   @artists = Artist.show_all
+  @categories = Category.show_all
   erb(:artworks)
 end
 
@@ -58,6 +63,7 @@ end
 # set up route to add new artwork form
 get '/artwork/add' do
   @artists = Artist.show_all
+  @categories = Category.show_all
   erb(:new_artwork_form)
 end
 
@@ -77,8 +83,10 @@ end
 
 get '/artwork/:id/edit' do
   artwork_id = params[:id]
-  @artwork = Artwork.find(artwork_id)
   @artists = Artist.show_all
+  @categories = Category.show_all
+  @artwork = Artwork.find(artwork_id)
+  # binding.pry
   erb(:edit_artwork_form)
 end
 

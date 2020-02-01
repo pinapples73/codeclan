@@ -41,13 +41,18 @@
   <% for artist in @artists %>
     <% if artist.id == artwork.artist_id %>
       <p>Artist: <%= artist.first_name %> <%= artist.last_name %></p>
-      <form method="post" action="/artwork/<%= artwork.id %>/delete">
-        <input type="submit"  value="Delete Artwork">
-      </form>
-      <form method="get" action="/artwork/<%=artwork.id%>/edit">
-        <input type="submit"  value="Edit Artwork">
-      </form>
     <% end %>
   <% end %>
+  <% for category in @categories %>
+    <% if artwork.category_id == category.id %>
+      <p>Category: <%= category.type.capitalize %></p>
+    <% end %>
+  <% end %>
+  <form method="post" action="/artwork/<%= artwork.id %>/delete">
+    <input type="submit"  value="Delete Artwork">
+  </form>
+  <form method="get" action="/artwork/<%=artwork.id%>/edit">
+    <input type="submit"  value="Edit Artwork">
+  </form>
   <hr>
 <% end %>

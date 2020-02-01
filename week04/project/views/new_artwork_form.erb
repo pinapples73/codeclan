@@ -11,5 +11,13 @@
       <option value="<%=artist.id%>"><%=artist.last_name.capitalize%>, <%=artist.first_name.capitalize%> </option>
     <% end %>
   </select>
+
+  <label for="cat-select">Assign a Category:</label>
+  <select id="cat-select" name="category_id">
+    <%for category in @categories%>
+      <option value="<%=category.id%>"><%=category.type.capitalize%></option>
+    <% end %>
+  </select>
+
   <input type="submit"  value="Add Artwork">
 </form>
