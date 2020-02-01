@@ -11,6 +11,16 @@
     <input type="submit"  value="Filter by Artist">
 </form>
 
+<form method="get" action="/artwork/category">
+  <label for="cat-select">Filter by category:</label>
+  <select id="art-by-cat-select" name="category_id">
+    <%for category in @categories%>
+      <option value="<%=category.id%>"> <%=category.type.capitalize%></option>
+      <% end %>
+    </select>
+    <input type="submit"  value="Filter by Category">
+</form>
+
 <form method="get" action="/artwork/all">
     <input type="submit"  value="Show All">
 </form>

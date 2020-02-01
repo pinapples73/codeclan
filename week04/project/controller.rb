@@ -52,6 +52,14 @@ get '/artwork/find' do
   erb(:artworks)
 end
 
+get '/artwork/category' do
+  id = params[:category_id]
+  @artworks = Artwork.find_by_category(id)
+  @artists = Artist.show_all
+  @categories = Category.show_all
+  erb(:artworks)
+end
+
 
 # set up route to delete artists form database
 post '/artist/:id/delete' do
