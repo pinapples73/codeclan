@@ -1,14 +1,39 @@
 <h2>All Artworks</h2>
 
+<form method="get" action="/artwork/find">
+  <label for="artist-select">Filter by artist:</label>
+  <select id="art-by-artist-select" name="artist_id">
+    <%for artist in @artists%>
+      <option value="<%=artist.id%>"><%=artist.last_name.capitalize%>, <%=artist.first_name.capitalize%>  </option>
+      <% end %>
+    </select>
+    <input type="submit"  value="Filter by Artist">
+</form>
+
 <%  for artwork in @artworks %>
   <p>Title: <%= artwork.title %></p>
   <p>Details: <%= artwork.details %> </p>
   <p>Date Created: <%= artwork.date_created %> </p>
   <% for artist in @artists %>
     <% if artwork.artist_id == artist.id %>
-      <p>Artist: <%= artist.first_name %> <%= artist.last_name %></p>
+      <p>Artist: <%= artist.last_name %>, <%= artist.first_name %> </p>
     <% end %>
   <% end %>
 <p></p>
 <hr>
 <% end %>
+
+
+<form method="get" action="/artwork/find">
+  <label for="artist-select">Filter by artist:</label>
+  <select id="art-by-artist-select" name="artist_id">
+    <%for artist in @artists%>
+      <option value="<%=artist.id%>"><%=artist.last_name.capitalize%>, <%=artist.first_name.capitalize%>  </option>
+      <% end %>
+    </select>
+    <input type="submit"  value="Filter by Artist">
+</form>
+
+<form method="get" action="/artwork/all">
+    <input type="submit"  value="Show All">
+</form>

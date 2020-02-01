@@ -14,6 +14,12 @@ get '/index' do
   erb ( :artworks )
 end
 
+get '/artwork/all' do
+  @artworks = Artwork.show_all
+  @artists = Artist.show_all
+  erb ( :artworks )
+end
+
 # set up route to admin page for managers
 get '/admin' do
   @artworks = Artwork.show_all
@@ -32,6 +38,15 @@ post '/artist/add' do
   @new_artist.save
   redirect '/admin'
 end
+
+get '/artwork/find' do
+  id = params[:artist_id]
+  # binding.pry
+  @artworks = Artwork.find_by_artist(id)
+  @artists = Artist.show_all
+  erb(:artworks)
+end
+
 
 # set up route to delete artists form database
 post '/artist/:id/delete' do
@@ -72,3 +87,6 @@ post '/artwork/:id/update' do
   Artwork.new(params).update
   redirect '/admin'
 end
+
+# binding.pry
+# nil

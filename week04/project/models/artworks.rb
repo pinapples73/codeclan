@@ -33,15 +33,23 @@ class Artwork
   def self.show_all
     sql = 'SELECT * FROM artworks ORDER BY artist_id'
     artworks_data = SqlRunner.run(sql)
-    return artworks_data.map { |artwork| Artwork.new(artwork) }
+    @results = artworks_data.map { |artwork| Artwork.new(artwork) }
+    p @results
   end
 
   def self.find(id)
-    sql = "SELECT * FROM artworks
-    WHERE id = $1"
+    sql = "SELECT * FROM artworks WHERE id = $1"
     values = [id]
     artworks_data = SqlRunner.run(sql, values)
-    return Artwork.new(artworks_data.first)
+    return artworks_data.map { |artwork| Artwork.new(artwork) }
+  end
+
+  def self.find_by_artist(id)
+    sql = "SELECT * FROM artworks WHERE artist_id = $1"
+    values = [id]
+    artworks_data = SqlRunner.run(sql, values)
+    @results = artworks_data.map { |artwork| Artwork.new(artwork) }
+    return @results
   end
 
   def self.delete_by_artist(id)

@@ -8,7 +8,7 @@
   <label for="arist-select">Assign an Artist:</label>
   <select id="artist-select" name="artist_id">
     <%for artist in @artists%>
-      <option value="<%=artist.id%>"><%=artist.first_name.capitalize%> <%=artist.last_name.capitalize%></option>
+      <option value="<%=artist.id%>"><%=artist.last_name.capitalize%>, <%=artist.first_name.capitalize%> </option>
     <% end %>
   </select>
   <input type="submit"  value="Add Artwork">
