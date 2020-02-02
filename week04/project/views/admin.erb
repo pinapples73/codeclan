@@ -1,58 +1,72 @@
-<h2>Artists</h2>
+<div class="content-flex">
+  <div class="sub-title-flex">
+    <label>Artists</label>
+  </div>
+
+  <div class="cards">
 
 
-<p>
-  <form method="get" action="/artist/add">
-    <input type="submit"  value="Add Artist">
-  </form>
-</p>
-<hr>
+    <%  for artist in @artists %>
 
-<%  for artist in @artists %>
-  <p>Name: <%= artist.first_name %> <%= artist.last_name %></p>
-  <form method="post" action="/artist/<%= artist.id %>/delete">
-    <input type="submit"  value="Delete Artist">
-  </form>
-  <hr>
-<% end %>
+    <article class="card-artist">
+      <div class="card-title">
+        <label><%= artist.first_name %> <%= artist.last_name %></label>
+      </div>
 
-<p>
-  <form method="get" action="/artist/add">
-    <input type="submit"  value="Add Artist">
-  </form>
-</p>
-<hr>
+      <img src="../public/images/defaultartist.png" alt="where">
 
+      <form method="post" action="/artist/<%= artist.id %>/delete">
+        <input type="submit"  value="Delete Artist">
+      </form>
 
-<h2>Artworks</h2>
-<p>
-  <form method="get" action="/artwork/add">
-    <input type="submit"  value="Add Artwork">
-  </form>
-
-</p>
-<hr>
-
-<%  for artwork in @artworks %>
-  <p>ID: <%= artwork.id %></p>
-  <p>Title: <%= artwork.title %></p>
-  <p>Details: <%= artwork.details %> </p>
-  <p>Date Created: <%= artwork.date_created %> </p>
-  <% for artist in @artists %>
-    <% if artist.id == artwork.artist_id %>
-      <p>Artist: <%= artist.first_name %> <%= artist.last_name %></p>
+    </article>
     <% end %>
-  <% end %>
-  <% for category in @categories %>
-    <% if artwork.category_id == category.id %>
-      <p>Category: <%= category.type.capitalize %></p>
+  </div>
+
+  <div class="large-button-flex">
+    <a href="/artist/add">Add Artist</a>
+  </div>
+
+
+  <div class="sub-title-flex">
+    <label>Artworks</label>
+  </div>
+  <div class="cards">
+
+    <%  for artwork in @artworks %>
+    <article class="card-artwork">
+      <div class="card-title">
+        <label><%= artwork.title %></label>
+      </div>
+      <label><%= artwork.id %></label>
+
+      <label><%= artwork.details %> </label>
+      <label><%= artwork.date_created %> </label>
+      <% for artist in @artists %>
+        <% if artist.id == artwork.artist_id %>
+          <label><%= artist.first_name %> <%= artist.last_name %></label>
+          <% end %>
+      <% end %>
+      <% for category in @categories %>
+        <% if artwork.category_id == category.id %>
+          <label><%= category.type.capitalize %></label>
+          <% end %>
+      <% end %>
+
+        <form method="post" action="/artwork/<%= artwork.id %>/delete">
+          <input type="submit"  value="Delete Artwork">
+        </form>
+        <form method="get" action="/artwork/<%=artwork.id%>/edit">
+          <input type="submit"  value="Edit Artwork">
+        </form>
+
+
+    </article>
     <% end %>
-  <% end %>
-  <form method="post" action="/artwork/<%= artwork.id %>/delete">
-    <input type="submit"  value="Delete Artwork">
-  </form>
-  <form method="get" action="/artwork/<%=artwork.id%>/edit">
-    <input type="submit"  value="Edit Artwork">
-  </form>
-  <hr>
-<% end %>
+  </div>
+
+  <div class="large-button-flex">
+    <a href="/artwork/add">Add Artwork</a>
+  </div>
+
+</div>
