@@ -4,16 +4,14 @@
   </div>
 
   <div class="cards">
-
-
     <%  for artist in @artists %>
 
     <article class="card-artist">
       <div class="card-title">
-        <label><%= artist.first_name %> <%= artist.last_name %></label>
+        <label><%= artist.first_name %> <%= artist.last_name%></label>
       </div>
 
-      <img src="../images/defaultartist.png" alt="where">
+      <img src="../images/artists/<%= artist.first_name.downcase %>-<%= artist.last_name.downcase %>.png" alt="where">
 
       <form method="post" action="/artist/<%= artist.id %>/delete">
         <input type="submit"  value="Delete Artist">
@@ -31,6 +29,7 @@
   <div class="sub-title-flex">
     <label>Artworks</label>
   </div>
+
   <div class="cards">
 
     <%  for artwork in @artworks %>
@@ -38,18 +37,23 @@
       <div class="card-title">
         <label><%= artwork.title %></label>
       </div>
-      <label><%= artwork.id %></label>
+
+      <div class="admin-art">
+        <img src="../images/artworks/thumb<%= artwork.id %>.png" alt="where">
+      </div>
+
+      <label>Reference #: <%= artwork.id %></label>
 
       <label><%= artwork.details %> </label>
-      <label><%= artwork.date_created %> </label>
+      <label>Date created: <%= artwork.date_created %> </label>
       <% for artist in @artists %>
         <% if artist.id == artwork.artist_id %>
-          <label><%= artist.first_name %> <%= artist.last_name %></label>
+          <label>Artist: <%= artist.first_name %> <%= artist.last_name %></label>
           <% end %>
       <% end %>
       <% for category in @categories %>
         <% if artwork.category_id == category.id %>
-          <label><%= category.type.capitalize %></label>
+          <label>Category: <%= category.type.capitalize %></label>
           <% end %>
       <% end %>
 

@@ -52,81 +52,81 @@ category2.save()
 
 
 artwork1 = Artwork.new({
-  "title" => "painting1",
-  "details" => "painting information goes here",
-  "date_created" => "10/10/75",
+  "title" => "Venom",
+  "details" => "Acrylic",
+  "date_created" => "2018",
   "artist_id" => 1,
   "category_id" => 1
 })
 
 artwork2 = Artwork.new({
-  "title" => "painting2",
-  "details" => "painting information goes here",
-  "date_created" => "10/10/75",
+  "title" => "Judge Dredd",
+  "details" => "Acrylic",
+  "date_created" => "2006",
   "artist_id" => 1,
   "category_id" => 1
 })
 
 artwork3 = Artwork.new({
-  "title" => "painting3",
-  "details" => "painting information goes here",
-  "date_created" => "10/10/75",
+  "title" => "Dune",
+  "details" => "Oils",
+  "date_created" => "1975",
   "artist_id" => 2,
   "category_id" => 1
 })
 
 artwork4 = Artwork.new({
-  "title" => "painting4",
-  "details" => "painting information goes here",
-  "date_created" => "30/1/1970",
+  "title" => "The Void",
+  "details" => "Oils",
+  "date_created" => "1970",
   "artist_id" => 2,
   "category_id" => 1
 })
 
 artwork5 = Artwork.new({
-  "title" => "painting5",
-  "details" => "painting information goes here",
-  "date_created" => "24/6/1985",
+  "title" => "Princess of Mars",
+  "details" => "Oils",
+  "date_created" => "1975",
   "artist_id" => 3,
   "category_id" => 1
 })
 
 artwork6 = Artwork.new({
-  "title" => "painting6",
-  "details" => "painting information goes here",
-  "date_created" => "5/10/2010",
+  "title" => "Death Dealer",
+  "details" => "Oils",
+  "date_created" => "2010",
   "artist_id" => 3,
   "category_id" => 1
 })
 
 artwork7 = Artwork.new({
-  "title" => "painting7",
-  "details" => "painting information goes here",
-  "date_created" => "13/4/2001",
+  "title" => "The Face",
+  "details" => "Ink & digital colour",
+  "date_created" => "2001",
   "artist_id" => 4,
   "category_id" => 1
 })
 
 artwork8 = Artwork.new({
-  "title" => "painting8",
-  "details" => "painting information goes here",
-  "date_created" => "10/1/1990",
+  "title" => "Arzach",
+  "details" => "Digital",
+  "date_created" => "1990",
   "artist_id" => 4,
   "category_id" => 1
 })
 
 artwork9 = Artwork.new({
-  "title" => "painting9",
-  "details" => "painting information goes here",
-  "date_created" => "11/4/1979",
+  "title" => "Wanderers",
+  "details" => "Digital",
+  "date_created" => "2013",
   "artist_id" => 5,
   "category_id" => 1
 })
 
 artwork10 = Artwork.new({
-  "title" => "painting10",
-  "details" => "painting information goes here",
-  "date_created" => "1/10/1980",
+  "title" => "The Illustrated Man",
+  "details" => "Acrylic",
+  "date_created" => "1980",
   "artist_id" => 5,
   "category_id" => 1
 })
@@ -143,3 +143,95 @@ artwork7.save()
 artwork8.save()
 artwork9.save()
 artwork10.save()
+
+artwork11 = Artwork.new({
+  "title" => "Slaine",
+  "details" => "Acrylic",
+  "date_created" => "1991",
+  "artist_id" => 1,
+  "category_id" => 1
+})
+
+artwork12 = Artwork.new({
+  "title" => "King Conan",
+  "details" => "Acrylic",
+  "date_created" => "2016",
+  "artist_id" => 1,
+  "category_id" => 1
+})
+
+artwork13 = Artwork.new({
+  "title" => "Machine in Shaft",
+  "details" => "Oils",
+  "date_created" => "1975",
+  "artist_id" => 2,
+  "category_id" => 1
+})
+
+artwork14 = Artwork.new({
+  "title" => "Starship Rescue",
+  "details" => "Oils",
+  "date_created" => "1970",
+  "artist_id" => 2,
+  "category_id" => 1
+})
+
+artwork15 = Artwork.new({
+  "title" => "Princess of Mars",
+  "details" => "Oils",
+  "artist_id" => 3,
+  "category_id" => 1
+})
+
+artwork16 = Artwork.new({
+  "title" => "Death Dealer",
+  "details" => "Oils",
+  "date_created" => "5/10/2010",
+  "artist_id" => 3,
+  "category_id" => 1
+})
+
+artwork17 = Artwork.new({
+  "title" => "The Face",
+  "details" => "Ink & digital colour",
+  "date_created" => "13/4/2001",
+  "artist_id" => 4,
+  "category_id" => 2
+})
+
+artwork18 = Artwork.new({
+  "title" => "Arzach",
+  "details" => "Digital",
+  "date_created" => "10/1/1990",
+  "artist_id" => 4,
+  "category_id" => 2
+})
+
+artwork19 = Artwork.new({
+  "title" => "Wanderers",
+  "details" => "Digital",
+  "date_created" => "11/4/2013",
+  "artist_id" => 5,
+  "category_id" => 2
+})
+
+artwork20 = Artwork.new({
+  "title" => "The Illustrated Man",
+  "details" => "Acrylic",
+  "date_created" => "1/10/1980",
+  "artist_id" => 5,
+  "category_id" => 2
+})
+
+
+
+artwork11.save()
+artwork12.save()
+artwork13.save()
+artwork14.save()
+artwork15.save()
+artwork16.save()
+artwork17.save()
+artwork18.save()
+artwork19.save()
+artwork20.save()

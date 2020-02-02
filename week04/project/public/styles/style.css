@@ -18,16 +18,46 @@ main {
   flex-direction: column;
 }
 
+.card-wrapper {
+  display: flex;
+  margin: 5px;
+  background: #4D5061;
+  color: #E7E247;
+  font-size: 0.8em;
+}
+
+.cards2 {
+  display: flex;
+  padding: 20px;
+  background: #231F20;
+  flex-direction: row;
+  justify-content:flex-start;
+}
+
+.card-wrapper img {
+  display: flex;
+  object-fit: contain;
+  height: 200px;
+}
+
+.card-artwork2 {
+  display: flex;
+  padding: 2px;
+  flex-direction: column;
+  margin: 2px 2px;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
-  background: #E6E8E6;
+  background: #231F20;
   flex-direction: row;
   justify-content: space-around;
 }
 
 .card-artist {
   display: flex;
+  padding: 4px;
   flex-wrap: nowrap;
   flex-direction: column;
   width: 150px;
@@ -36,6 +66,17 @@ main {
   border: 1px solid #ccc;
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
   background: #F7F7FF;
+}
+
+.card-title {
+  display: flex;
+  padding: 2px 5px;
+  flex-wrap: wrap;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  justify-content: center;
+  background: #231F20;
+  color: #E6E8E6;
+  font-size: 0.8em;
 }
 
 .card-artist label {
@@ -43,16 +84,29 @@ main {
   align-self: center;
 }
 
+.card-artist img {
+  height: 150px;
+  padding: 4px;
+}
+
 .card-artist input {
   display: flex;
-  text-align: center;
+  justify-content: center;
   padding: 4px;
   font-size: 0.8em;
   width:100%;
+  border: 1;
+  border-style:solid;
+  border-color: #F7F7FF;
+  background-color: #231F20;
+  color: #E6E8E6;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .card-artwork {
   display: flex;
+  padding: 4px;
   flex-wrap: nowrap;
   flex-direction: column;
   width: 150px;
@@ -60,9 +114,18 @@ main {
   margin: 10px 10px;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-  justify-content: center;
+  justify-content:space-between;
   background: #F7F7FF;
 }
+
+.card-artwork img {
+  display: flex;
+  object-fit: contain;
+  width: 150px;
+  padding: 0px;
+}
+
+
 
 .card-artwork label {
   display: flex;
@@ -74,23 +137,20 @@ main {
 
 .card-artwork input {
   display: flex;
-  align-self: center;
-  text-align: center;
+  justify-content: center;
   padding: 4px;
   font-size: 0.8em;
   width:100%;
+  /* border: 1; */
+  border-style:solid;
+  border-color: #F7F7FF;
+  background-color: #231F20;
+  color: #E6E8E6;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.card-title {
-  display: flex;
-  padding: 2px 5px;
-  flex-wrap: wrap;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-  justify-content: center;
-  background: #4D5061;
-  color: #E6E8E6;
-}
+
 
 .card-title label {
   display: flex;
@@ -139,7 +199,8 @@ main {
 }
 
 .large-button-flex a:hover {
-  background-color: #E6E8E6;
+  background-color: #231F20;
+  color: #E7E247;
 }
 
 .nav-flex {
@@ -152,11 +213,14 @@ main {
 
 .nav-flex a {
   padding: 5px 40px;
+  color: #231F20;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .nav-flex a:hover {
-  background-color: #E6E8E6;
+  background-color: #231F20;
+  color: #E7E247;
 }
 
 .nav2-flex {
