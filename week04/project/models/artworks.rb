@@ -51,8 +51,11 @@ class Artwork
     random_index = rand(1..number_of_artists)
     random_artist_id = artists_id_data[random_index-1]['id'].to_i
 
+
     artwork_data = Artwork.find_by_artist(random_artist_id)
-    return artwork_data.first
+    number_of_artworks = artwork_data.count()
+    random_artwork_id = rand(1..number_of_artworks)
+    return artwork_data[random_artwork_id-1]
   end
 
   def self.find_by_artist(id)
