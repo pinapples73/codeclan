@@ -172,11 +172,16 @@ main {
   display:flex;
   font-family: 'Righteous', cursive;
   height: 100px;
-  justify-content:center;
+  justify-content:space-between;
   align-content: center;
   background-color: #231F20;
   color: #E6E8E6;
   font-size: 5em;
+}
+
+.title-flex img {
+  display:flex;
+  object-fit: scale-down;
 }
 
 .sub-title-flex{

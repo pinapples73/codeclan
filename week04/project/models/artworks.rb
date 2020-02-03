@@ -55,7 +55,12 @@ class Artwork
     artwork_data = Artwork.find_by_artist(random_artist_id)
     number_of_artworks = artwork_data.count()
     random_artwork_id = rand(1..number_of_artworks)
-    return artwork_data[random_artwork_id-1]
+    p "EEEEEEEEEEEEEEEEEEEEEEEEEEE #{random_artwork_id}"
+    if random_artwork_id != nil
+      return artwork_data[random_artwork_id-1]
+    else
+      Artwork.select_featured_artist()
+    end
   end
 
   def self.find_by_artist(id)
