@@ -1,17 +1,10 @@
-.box {
-  width: 400px;
-  height: 400px;
+.cropped {
+    width: 100%; /* width of container */
+    height: 600px; /* height of container */
+    overflow: hidden;
 }
 
-.crop-to-fit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.crop-to-fit img {
-  flex-shrink:0;
-  min-width:100%;
-  min-height:100%
+.cropped img {
+  width: 100%;
+  height: auto;
 }
