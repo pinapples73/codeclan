@@ -44,6 +44,17 @@ class Artwork
     return Artwork.new(artworks_data.first)
   end
 
+  def self.select_featured_artist
+    sql = "SELECT id FROM artists"
+    artists_id_data = SqlRunner.run(sql)
+    number_of_artists = artists_id_data.count
+    random_index = rand(1..number_of_artists)
+    random_artist_id = artists_id_data[random_index-1]['id'].to_i
+
+    artwork_data = Artwork.find_by_artist(random_artist_id)
+    return artwork_data.first
+  end
+
   def self.find_by_artist(id)
     sql = "SELECT * FROM artworks WHERE artist_id = $1"
     values = [id]

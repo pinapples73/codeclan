@@ -11,10 +11,12 @@ also_reload( 'models/*' )
 
 # set up route to home page
 get '/index' do
-  @categories = Category.show_all
-  @artworks = Artwork.show_all
-  @artists = Artist.show_all
-  erb ( :artworks )
+  @featured_artist = Artwork.select_featured_artist()
+  p "result = #{@featured_artist}"
+  @artist = Artist.show_all
+
+  # @artists = Artist.show_all
+  erb ( :home )
 end
 
 get '/artwork/all' do

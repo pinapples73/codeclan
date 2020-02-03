@@ -7,7 +7,6 @@
   <div class="cards2">
 
     <form method="get" action="/artwork/find">
-      <label for="artist-select"></label>
       <select id="art-by-artist-select" name="artist_id">
         <%for artist in @artists%>
         <option value="<%=artist.id%>"> <%=artist.last_name.capitalize%>, <%=artist.first_name.capitalize%>  </option>
