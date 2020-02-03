@@ -35,13 +35,15 @@
     <%  for artwork in @artworks %>
       <div class="card-wrapper">
         <article class="card-artwork2">
-          <div class="card-title"><%= artwork.title %></div>
+          <div class="card-title">
+            <a href="/artwork/<%=artwork.id%>/display"><%= artwork.title %></a>
+          </div>
 
           <div class="main-art">
             <img src="../images/artworks/<%= artwork.id %>.png" alt="where">
           </div>
 
-          
+
           <% for artist in @artists %>
             <% if artist.id == artwork.artist_id %>
               <label>Artist: <%= artist.first_name %> <%= artist.last_name %></label>

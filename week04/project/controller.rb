@@ -103,5 +103,13 @@ post '/artwork/:id/update' do
   redirect '/admin'
 end
 
+get '/artwork/:id/display' do
+  artwork_id = params[:id]
+  @artwork = Artwork.find(artwork_id)
+  @artists = Artist.show_all
+  @categories = Category.show_all
+  erb(:display_art)
+end
+
 # binding.pry
 # nil
