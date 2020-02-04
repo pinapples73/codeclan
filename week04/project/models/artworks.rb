@@ -34,7 +34,7 @@ class Artwork
   def self.show_all
     sql = 'SELECT * FROM artworks ORDER BY artist_id'
     artworks_data = SqlRunner.run(sql)
-    return artworks_data.map { |artwork| Artwork.new(artwork) }
+    result = artworks_data.map { |artwork| Artwork.new(artwork) }
   end
 
   def self.find(id)
@@ -55,7 +55,6 @@ class Artwork
     artwork_data = Artwork.find_by_artist(random_artist_id)
     number_of_artworks = artwork_data.count()
     random_artwork_id = rand(1..number_of_artworks)
-    p "EEEEEEEEEEEEEEEEEEEEEEEEEEE #{random_artwork_id}"
     if random_artwork_id != nil
       return artwork_data[random_artwork_id-1]
     else
