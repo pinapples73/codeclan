@@ -27,4 +27,5 @@ class Category
     cat_data.map {|cat| Category.new(cat)}
   end
 
+
 end

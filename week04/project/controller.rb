@@ -113,5 +113,11 @@ get '/artwork/:id/display' do
   erb(:display_art)
 end
 
+post '/category/add' do
+  new_category = Category.new(params)
+  new_category.save()
+  redirect to '/artwork/add'
+end
+
 # binding.pry
 # nil
