@@ -34,12 +34,10 @@
     <%  for artwork in @artworks %>
       <div class="card-wrapper">
         <article class="card-artwork2">
-          <div class="card-title">
-            <a href="/artwork/<%=artwork.id%>/display"><%= artwork.title %></a>
-          </div>
+          <div class="card-title"><%= artwork.title %></div>
 
           <div class="main-art">
-            <img src="../images/artworks/<%= artwork.id %>.png" alt="where">
+            <a href="/artwork/<%=artwork.id%>/display"><img src="../images/artworks/<%= artwork.id %>.png" alt="where"></a>
           </div>
 
 
