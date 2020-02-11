@@ -31,10 +31,10 @@
 //   console.log(upperCaseSport);
 // }
 //
-// for (var i = 0; i < sports.length; i++){
-//   var sport = sports[i];
-//   var upperCaseSport = sport.toUpperCase();
-//     console.log(upperCaseSport);
+// for (let i = 0; i < sports.length; i++){
+//   // var sport = sports[i];
+//   // var upperCaseSport = sport.toUpperCase();
+//   //   console.log(upperCaseSport);
 // }
 
 // for (initialiseCounter; condition; mutateCounter) {

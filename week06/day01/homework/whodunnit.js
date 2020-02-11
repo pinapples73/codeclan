@@ -46,7 +46,7 @@
 //
 // const secondVerdict = `The murderer is ${murderer}.`;
 // console.log('Second Verdict: ', secondVerdict);
-
+//
 //ANSWER: first verdict = Mrs Peacock
 //second verdict = Professor Plum
 
@@ -134,8 +134,8 @@
 //     }
 //
 //     unexpectedOutcome();
-//
-//   }//miss scarlet at this point
+//     //miss scarlet at this point
+//   }
 //
 //   plotTwist();
 //   //miss scarlet
@@ -187,18 +187,18 @@
 // console.log(verdict);
 //ANSWER: candle stick
 
-// // Episode 9
-let murderer = 'Professor Plum';
-
-if (murderer === 'Professor Plum') {
-  let murderer = 'Mrs. Peacock';
-}
-
-
-const declareMurderer = function() {
-  return `The murderer is ${murderer}.`;
-}
-
-const verdict = declareMurderer();
-console.log(verdict);
+// // // // Episode 9
+// let murderer = 'Professor Plum';
+//
+// if (murderer === 'Professor Plum') {
+//   let murderer = 'Mrs. Peacock';
+// }
+//
+//
+// const declareMurderer = function() {
+//   return `The murderer is ${murderer}.`;
+// }
+//
+// const verdict = declareMurderer();
+// console.log(verdict);
 //ANSWER : prof plum
