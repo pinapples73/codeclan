@@ -5,8 +5,6 @@ const AnagramFinder = function (word) {
   this.word = this.word.sort();
   this.word = this.word.join('');
   this.word = this.word.toLowerCase();
-
-
 }
 
 
@@ -29,12 +27,3 @@ AnagramFinder.prototype.findAnagrams = function (otherWords) {
 };
 
 module.exports = AnagramFinder;
-
-
-// (anagramFinder.findAnagrams(['cat', 'dog']), ['cat']);
-//
-// return this.journeys.filter((journey) => {
-//     if (journey.distance > minDistance) {
-//       return journey;
-//     };
-//   });
