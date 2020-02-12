@@ -12,11 +12,5 @@ PangramFinder.prototype.isPangram = function () {
   return result;
 };
 
-// Cinema.prototype.anyFilmsByYear = function (year) {
-//   let result = this.films.some((film) => {
-//     return film.year === year;
-//   });
-//   return result;
-// };
 
 module.exports = PangramFinder;
