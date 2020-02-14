@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript loaded');
 
+
   //FUNCTION FOR HANDING SUBMIT
   const handleFormSubmit = function(event) {
     event.preventDefault();
-    // console.log(event);
 
     let checkedValues = '';
     let subGenreElements = event.target.checkSubGenre;
