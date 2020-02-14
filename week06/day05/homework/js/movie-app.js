@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const handleFormSubmit = function(event) {
     event.preventDefault();
 
+    //THIS PART IS TO DISPLAY THE CHECK BOXES
     let checkedValues = '';
     let subGenreElements = event.target.checkSubGenre;
     console.log(event.target.checkSubGenre);
@@ -15,9 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
           }
     }
 
+    //TO CREATE A NEW LIST ITEM
+    //GET UL WHERE NEW LIST ITEMS WILL BE PASSED
     const resultList = document.querySelector('#list-movies');
+    //CREATE NEW LIST ITEM
     const newListItem = document.createElement('li');
 
+    // UPDATE CONTENTS OF LIST ITEM
     newListItem.textContent = `
     Title: ${event.target.inputTitle.value} --
     Director: ${event.target.inputDirector.value} --
@@ -27,8 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
     Watched: ${event.target.inputWatched.value} --
     Rating: ${event.target.radioRating.value} stars`;
 
+    //ADD LIST ITEM TO THE UL
     resultList.appendChild(newListItem);
 
+    //CLEAR THE FORM
     document.getElementById("form-movie").reset();
 
   }
