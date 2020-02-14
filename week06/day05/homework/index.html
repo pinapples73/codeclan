@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Movie Tracker</title>
+  <script src="js/movie-app.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1 id="heading">My Movie Tracker</h1>
+
+  <h2>Complete the below form to record a movie.</h2>
+
+  <form id="form-movie">
+
+    <label for="inputTitle">Title:</label>
+    <input id="inputTitle" type="text" />
+    <br>
+    <br>
+
+    <label for="inputDirector">Director:</label>
+    <input id="inputDirector" type="text" />
+    <br>
+    <br>
+
+    <label for="inputReleased">Released:</label>
+    <input id="inputReleased" type="text" />
+    <br>
+    <br>
+
+    <label for="selectGenre">Released:</label>
+    <select id="selectGenre">
+      <option disabled selected>pick one</option>
+      <option value="Thriller">Thriller</option>
+      <option value="Drama">Drama</option>
+      <option value="Action">Action</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Musical">Musical</option>
+      <option value="Horror">Horror</option>
+    </select>
+    <br>
+    <br>
+
+    <label for="checkSubGenre">Sub-genre:</label>
+    <input type="checkbox" id="subGenre1" name="checkSubGenre" value="Sci-fi">
+    <label for="subGenre1"> Sci-fi</label>
+    <input type="checkbox" id="subGenre2" name="checkSubGenre" value="Fantasy">
+    <label for="subGenre2"> Fantasy</label>
+    <input type="checkbox" id="subGenre3" name="checkSubGenre" value="War">
+    <label for="subGenre3"> War</label>
+    <input type="checkbox" id="subGenre4" name="checkSubGenre" value="Modern">
+    <label for="subGenre4"> Modern</label>
+    <input type="checkbox" id="subGenre5" name="checkSubGenre" value="Period">
+    <label for="subGenre5"> Period</label>
+    <input type="checkbox" id="subGenre6" name="checkSubGenre" value="Tear Jerker">
+    <label for="subGenre6"> Tear Jerker</label>
+    <input type="checkbox" id="subGenre7" name="checkSubGenre" value="Indie">
+    <label for="subGenre7"> Indie</label>
+    <input type="checkbox" id="subGenre8" name="checkSubGenre" value="Non-English Language">
+    <label for="subGenre8"> Non-English Language</label>
+    <input type="checkbox" id="subGenre9" name="checkSubGenre" value="Violent">
+    <label for="subGenre9"> Violent</label>
+    <br>
+    <br>
+
+    <hr>
+
+    <label for="inputWatched">Watched:</label>
+    <input id="inputWatched" type="text" />
+    <br>
+    <br>
+
+    <label for="radioRating">Rating:</label>
+    <input type="radio" id="radio1" name="radioRating" value=1>
+    <label for="radio1">1</label>
+    <input type="radio" id="radio2" name="radioRating" value=2>
+    <label for="radio2">2</label>
+    <input type="radio" id="radio3" name="radioRating" value=3>
+    <label for="radio3">3</label>
+    <input type="radio" id="radio4" name="radioRating" value=4>
+    <label for="radio4">4</label>
+    <input type="radio" id="radio5" name="radioRating" value=5>
+    <label for="radio5">5</label>
+    <br>
+    <br>
+
+    <button type="submit" id="submit">Submit Review</button>
+
+  </form>
+
+    <hr>
+
+    <div id='movies'>
+      <ul id='list-movies'></ul>
+    </div>
+  </body>
+</html>
