@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue - To Do List</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/bundle.js"></script>
+</head>
+<body>
+  <div id="app">
+
+    <ul>
+      <li v-for="item in todoList">
+        <span>Task: {{item.task}}</span>
+        <span v-bind:class="item.priority==='high' ? 'high' : 'low' "> Priority: {{ item.priority }}</span>
+      </li>
+    </ul>
+
+    <form v-on:submit.prevent="addNewtask()">
+      <label for="new-task">Add new task:</label>
+      <input id="new-task" type="text" v-model="newTask"/>
+
+      <input type="radio" id="low" v-model="newPriority" value="low">
+      <label for="low">low</label>
+      <input type="radio" id="medium" v-model="newPriority" value="medium">
+      <label for="medium">medium</label>
+      <input type="radio" id="high" v-model="newPriority" value="high">
+      <label for="high">high</label>
+
+      <input type="submit" value="Add New Task"/>
+    </form>
+
+  </div>
+</body>
+</html>
