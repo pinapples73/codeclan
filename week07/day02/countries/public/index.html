@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Countries</title>
+    <script src="./js/bundle.js"></script>
+  </head>
+  <body>
+
+    <div id="app">
+
+
+      <h2>Total population: {{totalPopulation}}</h2>
+      <!-- <p>{{ filterByCountry }}</p> -->
+
+      <form>
+        <label for="countrySelect"></label>
+        <select id="countrySelect" v-model="selectedCountry" v-on:change="singleCountryDetails" >
+          <option v-for="countryName in mapByCountryName" v-bind:value="countryName" >{{countryName}}</option>
+        </select>
+      </form>
+
+      <section>
+        <div class="country">
+          <h2>{{singleCountry.name}}</h2>
+          <p>
+            <img :src="singleCountry.flag">
+          </p>
+        </div>
+      </section>
+    </div>
+
+  </body>
+</html>
+
+<!-- <label for="cars">Choose a car:</label>
+
+<select id="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select> -->
