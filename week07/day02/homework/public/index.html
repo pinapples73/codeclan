@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <title>Currency Convertor</title>
+      <script src="./js/bundle.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Currency Convertor</h2>
+      <p>{{ addEuro }}</p>
+      <hr>
+      <br>
+      <form>
+          <label for="fromSelect"> From currency</label>
+          <select id="fromSelect" v-model.number="fromRate" v-on:change="convertCurrency">
+            <option v-for="(value, currency) in rateData.rates" v-bind:value="value">{{currency}}</option>
+          </select>
+
+          <label for="toSelect"> To currency</label>
+          <select id="toSelect" v-model.number="toRate" v-on:change="convertCurrency">
+            <option v-for="(value, currency) in rateData.rates" v-bind:value="value">{{currency}}</option>
+          </select>
+
+          <br><br>
+
+          <label for="amountInput">Enter amount:</label>
+          <input type="number" v-model.number="amount" v-on:change="convertCurrency"><br><br>
+          <br>
+          <hr>
+          <p>Converted Amount:{{toAnyCurrency}}</p>
+
+      </form>
+    </div>
+
+  </body>
+</html>
