@@ -1,7 +1,7 @@
 <template>
   <div id="all-items">
-    <div id='movie-item' v-for="(movie, index) in movieData">
-      <movie-list-item :movie='movie' :peopleData='peopleData'/>
+    <div id='movie-item' v-for="(movie, index) in newMovieData">
+      <movie-list-item :movie='movie' :peopleData='newPeopleData'/>
     </div>
   </div>
 </template>
@@ -14,6 +14,12 @@ export default {
   props: ['movieData', 'peopleData'],
   components: {
     'movie-list-item': MovieListItem
+  },
+  data(){
+    return{
+      newMovieData: this.movieData,
+      newPeopleData: this.peopleData
+    }
   }
 }
 

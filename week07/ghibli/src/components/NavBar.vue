@@ -1,6 +1,6 @@
 <template lang="html">
   <div id='side-bar'>
-    <nav-search />
+    <nav-search :selectedMenu='selectedMenu'/>
     <img id='nav-logo' src='https://images-na.ssl-images-amazon.com/images/I/71%2BCTDyxfAL._SX425_.jpg' />
     <nav-menu/>
   </div>
@@ -12,11 +12,7 @@ import NavMenu from "./NavMenu.vue";
 
 export default {
   name: 'nav-bar',
-  data(){
-    return {
-
-    }
-  },
+  props: ['selectedMenu'],
   components: {
     'nav-search': NavSearch,
     'nav-menu': NavMenu

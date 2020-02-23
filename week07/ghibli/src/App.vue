@@ -10,7 +10,7 @@
       <ghibli-header/>
     </div>
 
-    <nav-bar id='navigation'/>
+    <nav-bar id='navigation' :selectedMenu='selectedMenu'/>
 
     <div id='content-display'>
       <div v-if="selectedMenu === 'movie'" id='movie-details'>
