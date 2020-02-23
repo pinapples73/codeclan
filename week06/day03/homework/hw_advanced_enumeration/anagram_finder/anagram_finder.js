@@ -26,4 +26,5 @@ AnagramFinder.prototype.findAnagrams = function (otherWords) {
   return returnArray;
 };
 
+
 module.exports = AnagramFinder;

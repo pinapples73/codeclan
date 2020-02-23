@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       convertCurrency: function(){
         this.toAnyCurrency = ((this.toRate / this.fromRate) * this.amount).toFixed(2);
-      },
+      }
 
     }
   })

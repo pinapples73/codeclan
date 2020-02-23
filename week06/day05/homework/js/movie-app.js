@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript loaded');
 
-
   //FUNCTION FOR HANDING SUBMIT
   const handleFormSubmit = function(event) {
     event.preventDefault();
@@ -9,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //THIS PART IS TO DISPLAY THE CHECK BOXES
     let checkedValues = '';
     let subGenreElements = event.target.checkSubGenre;
-    console.log(event.target.checkSubGenre);
+    // console.log(event.target.checkSubGenre);
     for(let i=0; i < subGenreElements.length; i++){
           if(subGenreElements[i].checked){
                checkedValues += (subGenreElements[i].value + '/');
@@ -40,12 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 
-
   // QUERYSELECTOR FOR FORM
   const form = document.querySelector('#form-movie')
 
   //EVEN HANDLER FOR FORM SUBMIT
   form.addEventListener('submit', handleFormSubmit)
-
 
 });

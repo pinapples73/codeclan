@@ -84,4 +84,12 @@ describe('Park', function() {
     assert.strictEqual(actual, expected);
   });
 
+  it('should be able to remove all dinos of a particular speciies', function(|){
+
+  });
+
+  it('should be able to provide an object containing each of the diet types and the number of dinosaurs in the park of that diet type', function(){
+    }
+  });
+
 });

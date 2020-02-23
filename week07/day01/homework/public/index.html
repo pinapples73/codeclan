@@ -15,7 +15,7 @@
     <ul>
       <li v-for="item in todoList">
         <span>Task: {{item.task}}</span>
-        <span v-bind:class="item.priority==='high' ? 'high' : 'low' "> Priority: {{ item.priority }}</span>
+        <span>Priority: </span><span v-bind:class="item.priority==='high' ? 'high' : 'low' "> {{ item.priority }} </span>
       </li>
     </ul>
 

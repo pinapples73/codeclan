@@ -67,4 +67,8 @@ Park.prototype.yearlyRevenue = function(){
   return total;
 }
 
+Park.prototype.noOfDinosaursByDiet = function (){
+
+}
+
 module.exports = Park;

@@ -1,4 +1,4 @@
-<template lang="html">
+<!-- <template lang="html">
   <div>
     <ul>
       <list-item v-for="(country, index) in countries" :country="country" :key="index"></list-item>
@@ -19,4 +19,4 @@ export default {
 </script>
 
 <style lang="css" scoped>
-</style>
+</style> -->

@@ -44,4 +44,5 @@ Traveller.prototype.getUniqueModesOfTransport = function () {
   return result;
 };
 
+
 module.exports = Traveller;
