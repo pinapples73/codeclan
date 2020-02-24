@@ -1,0 +1,56 @@
+1. What is responsible for defining the routes of the games resource?
+-- createRouter.js (server)
+
+
+2. What do you notice about the folder structure? Whats the client responsible for? Whats the server responsible for?
+-- client and server are split between separate folders
+-- client is responsible for displaying game details
+-- client is also responsible for allowing users to add or delete from the list of games
+-- client communicates with server via pre-defined routes via get, post and delete methods
+-- client listens for changes in games (add, delete) and updates local games list accordingly
+
+-- server responsible for creating the db and collection
+-- server is responsible for creating the routes used to communicate between client and server
+-- server is responsible for updating the db when instructed to by client
+
+
+
+3. What are the the responsibilities of server.js?
+-- server.js creates the db, collection and gamesRouter
+-- server.js listens for responses from the db
+
+
+
+4. What are the responsibilities of the gamesRouter?
+-- gamesRouter creates the routes used to communicate between client and server and gets, posts and deletes data to/from the db
+
+
+
+5. What process does the the client (front-end) use to communicate with the server?
+-- RESTful API
+
+
+
+6. What optional second argument does the fetch method take?
+-- an init object that allows to specify a number of additional parameters such as method, body and headers etc.
+
+ And what is it used for in this application? Hint: See Using Fetch on the MDN docs
+-- it is used to post a new game (specifying the data to be sent, converting it to json and specifying the data format is json)
+-- it is used to delete a game based on its id
+
+
+
+7. Which of the games API routes does the front-end application consume (i.e. make requests to)?
+--get and post use http://localhost:3000/api/games/
+-- delete uses http://localhost:3000/api/games/:id
+
+8. What are we using the MongoDB Driver for?
+-- it allows our app written in javascript to communicate with the MongoDB
+
+EXTENSION:
+9. Why do we need to use ObjectId from the MongoDB driver?
+-- ObjectID is the automatically created unique identifier for the document when inserting into the db.
+-- It is in BSON format and is made up of the following:
+-- 4-byte timestamp value of the ObjectId’s creation
+-- 5-byte random value
+-- 3-byte incrementing counter, initialised to a random value
