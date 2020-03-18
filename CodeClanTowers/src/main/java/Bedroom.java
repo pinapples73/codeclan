@@ -35,4 +35,12 @@ public class Bedroom {
         // TODO: 18/03/2020  add a capacity check later
         guestList.add(guest);
     }
+
+    public void removeGuest(Guest guest){
+        Boolean guestInRoom = guestList.contains(guest);
+        if(guestInRoom){
+            guestList.remove(guest);
+        }
+
+    }
 }

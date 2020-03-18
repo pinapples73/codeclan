@@ -28,6 +28,14 @@ public class ConferenceRoom {
         guestList.add(guest);
     }
 
+    public void removeGuest(Guest guest){
+        Boolean guestInRoom = guestList.contains(guest);
+        if(guestInRoom){
+            guestList.remove(guest);
+        }
+
+    }
+
 
 
 }

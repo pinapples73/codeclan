@@ -46,4 +46,11 @@ public class ConferenceRoomTest {
         assertEquals(guest1, conferenceRoom1.getGuestList().get(0));
     }
 
+    @Test
+    public void testRemoveGuestFromConferenceRoom(){
+        conferenceRoom2.addGuest(guest5);
+        conferenceRoom2.removeGuest(guest5);
+        assertEquals(0, conferenceRoom2.getGuestList().size());
+    }
+
 }
