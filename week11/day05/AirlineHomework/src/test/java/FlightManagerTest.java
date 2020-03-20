@@ -29,7 +29,7 @@ public class FlightManagerTest {
         passengerList.add(passenger1);
         passengerList.add(passenger2);
 
-        flight1 = new Flight(passengerList, plane, "TJ001","GLA", "EDI", "12:00");
+        flight1 = new Flight(passengerList, plane, "TJ001","GLA", "EDI", "2021-05-05T11:50");
 
         flightManager1 = new FlightManager(flight1);
 
@@ -54,5 +54,7 @@ public class FlightManagerTest {
     public void testRemainingBaggageWeight(){
         assertEquals(200, flightManager1.getRemainingBaggageWeight());
     }
+
+
 
 }

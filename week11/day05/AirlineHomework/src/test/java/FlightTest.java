@@ -31,7 +31,9 @@ public class FlightTest {
         passengerList = new ArrayList<Passenger>();
             passengerList.add(passenger1);
 
-        flight1 = new Flight(passengerList, plane, "TJ001","GLA", "EDI", "12:00");
+        flight1 = new Flight(passengerList, plane, "TJ001","GLA", "EDI", "2021-05-05T11:50");
+
+//        passenger1.setSeat(2);
     }
 
     @Test
@@ -61,7 +63,7 @@ public class FlightTest {
 
     @Test
     public void testGetDepartureTime(){
-        assertEquals("12:00", flight1.getDepartureTime());
+        assertEquals("2021-05-05T11:50", flight1.getDepartureTime());
     }
 
     @Test
@@ -81,5 +83,17 @@ public class FlightTest {
         flight1.bookFlight(passenger3);
         assertEquals(2, flight1.getPassengerListSize());
     }
+
+    @Test
+    public void testGetFlight(){
+        flight1.bookFlight(passenger2);
+        assertEquals(flight1, passenger2.getFlight());
+    }
+
+//    @Test
+//    public void testGenerateRandomSeatNumber(){
+//        flight1.bookFlight(passenger2);
+//        assertEquals(1, passenger2.getSeat());
+//    }
 
 }

@@ -1,3 +1,5 @@
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Flight {
@@ -7,7 +9,7 @@ public class Flight {
     private String flightNumber;
     private String destination;
     private String departingAirport;
-    private String departureTime;
+    private LocalDateTime departureTime;
 
     public Flight(ArrayList<Passenger> passengerList, Plane plane, String flightNumber, String destination, String departingAirport, String departureTime){
         this.passengerList = passengerList;
@@ -15,7 +17,8 @@ public class Flight {
         this.flightNumber = flightNumber;
         this.destination = destination;
         this.departingAirport = departingAirport;
-        this.departureTime = departureTime;
+        this.departureTime = LocalDateTime.parse(departureTime);
+
     }
 
     public ArrayList<Passenger> getPassengerList() {
@@ -39,7 +42,7 @@ public class Flight {
     }
 
     public String getDepartureTime() {
-        return departureTime;
+        return departureTime.toString();
     }
 
     public int getPassengerListSize() {
@@ -53,13 +56,15 @@ public class Flight {
         return result;
     }
 
+
+
     public void bookFlight(Passenger newPassenger){
         if(checkAvailableSeats() > 0){
             passengerList.add(newPassenger);
-            System.out.println("New passenger added " + newPassenger.getName());
-        } else {
-            System.out.println("The plane has no available seats for this flight. Can't add " + newPassenger.getName());
+            newPassenger.addToFlight(this);
         }
     }
+
+
 
 }
