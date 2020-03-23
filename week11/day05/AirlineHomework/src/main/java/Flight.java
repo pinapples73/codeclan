@@ -56,15 +56,11 @@ public class Flight {
         return result;
     }
 
-
-
     public void bookFlight(Passenger newPassenger){
         if(checkAvailableSeats() > 0){
             passengerList.add(newPassenger);
             newPassenger.addToFlight(this);
         }
     }
-
-
 
 }

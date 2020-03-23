@@ -15,17 +15,17 @@ public class BookTest {
 
     @Test
     public void bookHasTitle(){
-        assertEquals("Lord of the Rings", book.bookHasTitle());
+        assertEquals("Lord of the Rings", book.getTitle());
     }
 
     @Test
     public void bookHasAuthor(){
-        assertEquals("JRR Tolkien", book.bookHasAuthor());
+        assertEquals("JRR Tolkien", book.getAuthor());
     }
 
     @Test
     public void bookHasGenre(){
-        assertEquals("Fantasy", book.bookHasGenre());
+        assertEquals("Fantasy", book.getGenre());
     }
 
 

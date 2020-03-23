@@ -10,17 +10,27 @@ public class Book {
         this.genre = genre;
     }
 
-    public String bookHasTitle(){
+    public String getTitle(){
         return this.title;
     }
 
-    public String bookHasAuthor(){
+    public String getAuthor(){
         return this.author;
     }
 
-    public String bookHasGenre(){
+    public String getGenre(){
         return this.genre;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
 }

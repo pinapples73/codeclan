@@ -3,8 +3,6 @@ public enum SuitType {
     DIAMONDS,
     SPADES,
     CLUBS;
-
-    public SuitType[] types = SuitType.values();
 }
 
 
