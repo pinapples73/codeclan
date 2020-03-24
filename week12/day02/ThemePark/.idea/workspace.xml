@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="44bffff2-a3e3-4997-ba49-0734ea0c92a0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/Stereo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/main/java/behaviours/IConnect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/main/java/behaviours/ILoadMedia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/main/java/behaviours/IPlay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/main/java/behaviours/IStop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/main/java/devices/MP3Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/main/java/stereostuff/Stereo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/main/java/superclass/Component.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/main/java/superclass/subclasses/CDPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/main/java/superclass/subclasses/GraphicEQ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/main/java/superclass/subclasses/Radio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/main/java/superclass/subclasses/RecordDeck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/main/java/superclass/subclasses/TapeDeck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/test/java/CDPlayerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/test/java/ComponentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/test/java/GraphicEQTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/test/java/RadioTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/test/java/RecordDeckTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../week11/day05/Stereo/src/test/java/TapeDeckTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/Doom.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/src/main/java/enemies/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/src/main/java/enemies/others/Cacodemon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/src/main/java/enemies/others/Demon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/src/main/java/enemies/others/HellKnight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/src/main/java/enemies/others/Imp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/src/main/java/enemies/zombies/FormerCommando.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/src/main/java/enemies/zombies/FormerHuman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/src/main/java/enemies/zombies/FormerHumanSeargant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/src/main/java/levels/Level.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/src/main/java/pickups/BasePickup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Doom/src/main/java/player/DoomSlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/Gladiator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/main/java/livingentities/Participant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/main/java/livingentities/crowd/Emperor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/main/java/livingentities/crowd/Gentry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/main/java/livingentities/crowd/Peasants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/main/java/livingentities/fighters/Bestiarius.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/main/java/livingentities/fighters/Cestus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/main/java/livingentities/fighters/Crupellarii.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/main/java/livingentities/fighters/Fighter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/main/java/livingentities/fighters/Hoplomachus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/main/java/livingentities/fighters/Lion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/main/java/livingentities/fighters/Sagittarius.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/main/java/managers/FightManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/main/java/places/Arena.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/test/java/BestiariusTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/test/java/EmperorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/test/java/FighterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/test/java/GentryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/src/test/java/PeasantsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/target/classes/livingentities/Participant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/target/classes/livingentities/crowd/Emperor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/target/classes/livingentities/crowd/Gentry.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/target/classes/livingentities/crowd/Peasants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/target/classes/livingentities/fighters/Bestiarius.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/target/classes/livingentities/fighters/Cestus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/target/classes/livingentities/fighters/Crupellarii.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/target/classes/livingentities/fighters/Hoplomachus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/target/classes/livingentities/fighters/Lion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/target/classes/livingentities/fighters/Sagittarius.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/target/classes/managers/FightManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/target/classes/places/Arena.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gladiator/target/test-classes/EmperorTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Interfaces/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Interfaces/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Interfaces/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Interfaces/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Interfaces/interface_start_point.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Interfaces/src/main/java/ICycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Interfaces/src/main/java/IRun.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Interfaces/src/main/java/ISwim.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Interfaces/src/main/java/MarathonRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Interfaces/src/main/java/Sprinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Polymorphism/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Polymorphism/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Polymorphism/src/main/java/Desktop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Polymorphism/src/main/java/IConnect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Polymorphism/src/main/java/Network.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Polymorphism/src/main/java/Printer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Polymorphism/src/test/java/DesktopTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Polymorphism/src/test/java/NetworkTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Polymorphism/src/test/java/PrinterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homework/plan" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/EmployeeSystem.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/src/main/java/staff/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/src/main/java/staff/managment/Director.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/src/main/java/staff/managment/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/src/main/java/staff/techStaff/DatabaseAdmin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/src/main/java/staff/techStaff/Developer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/src/test/java/DatabaseAdminTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/src/test/java/DeveloperTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/src/test/java/DirectorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/src/test/java/EmployeeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/src/test/java/management/Manager/ManagerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/target/classes/META-INF/EmployeeSystem.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/target/classes/staff/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/target/classes/staff/managment/Director.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/target/classes/staff/managment/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/target/classes/staff/techStaff/DatabaseAdmin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/target/classes/staff/techStaff/Developer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/target/test-classes/DatabaseAdminTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/target/test-classes/DeveloperTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/target/test-classes/DirectorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/target/test-classes/EmployeeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/target/test-classes/META-INF/EmployeeSystem.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../week11/day05/EmployeeSystem/target/test-classes/ManagerTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1ZaRbEKCEGl3E3sa0Nldpg1n3tQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="44bffff2-a3e3-4997-ba49-0734ea0c92a0" name="Default Changelist" comment="" />
+      <created>1585075287966</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585075287966</updated>
+    </task>
+    <servers />
+  </component>
+</project>
