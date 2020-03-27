@@ -2,6 +2,7 @@ package instruments;
 
 import behaviours.IPlay;
 import behaviours.ISell;
+import enums.Section;
 
 public class Bassoon extends Instrument implements IPlay, ISell {
     // Buffet 22 keys or Heckel 17 keys
@@ -10,7 +11,7 @@ public class Bassoon extends Instrument implements IPlay, ISell {
     private double purchasePrice;
     private double sellPrice;
 
-    public Bassoon(String type, String material, String section, int keys){
+    public Bassoon(String type, String material, Section section, int keys){
         super(type, material, section);
         this.keys = keys;
         this.purchasePrice = 500;

@@ -3,6 +3,7 @@ package shopping;
 import accessories.Drumsticks;
 import accessories.GuitarStrings;
 import behaviours.ISell;
+import enums.Section;
 import instruments.Bassoon;
 import instruments.Drum;
 import instruments.Guitar;
@@ -34,10 +35,10 @@ public class ShopTest {
         guitarStrings = new GuitarStrings("guitar accessory", 2,10);
         sheetMusic = new Drumsticks("book", 10,30);
 
-        bassoon = new Bassoon("Heckel", "wood","wood wind", 17);
-        guitar = new Guitar("acoustic", "wood", "string", 6);
-        drum = new Drum("bass", "pig skin", "percussion", 2);
-        piano = new Piano("grand", "ebony and ivory", "keys");
+        bassoon = new Bassoon("Heckel", "wood", Section.WIND, 17);
+        guitar = new Guitar("acoustic", "wood", Section.PERCUSSION, 6);
+        drum = new Drum("bass", "pig skin", Section.PERCUSSION, 2);
+        piano = new Piano("grand", "ebony and ivory", Section.KEYBOARD);
 
         stock.add(drumsticks);
         stock.add(sheetMusic);
@@ -62,5 +63,10 @@ public class ShopTest {
     public void removeFromStock() {
         shop.removeFromStock(drumsticks);
         assertEquals(3, shop.getStock().size());
+    }
+
+    @Test
+    public void testCalculatePotentialProfit(){
+        assertEquals(1130, shop.calculatePotentialProfit(), 0.01);
     }
 }

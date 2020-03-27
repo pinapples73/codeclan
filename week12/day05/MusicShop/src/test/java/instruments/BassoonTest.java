@@ -1,5 +1,6 @@
 package instruments;
 
+import enums.Section;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ public class BassoonTest {
 
     @Before
     public void before() {
-        bassoon = new Bassoon("buffet", "wood", "wood wind", 22);
+        bassoon = new Bassoon("buffet", "wood", Section.WIND, 22);
     }
 
     @Test

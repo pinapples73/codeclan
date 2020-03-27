@@ -1,5 +1,6 @@
 package instruments;
 
+import enums.Section;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ public class DrumTest {
 
     @Before
     public void setUp() throws Exception {
-        drum = new Drum("bass", "pig skin", "percussion", 2);
+        drum = new Drum("bass", "pig skin", Section.PERCUSSION, 2);
     }
 
     @Test

@@ -2,6 +2,7 @@ package instruments;
 
 import behaviours.IPlay;
 import behaviours.ISell;
+import enums.Section;
 
 public class Guitar extends Instrument implements IPlay, ISell {
 
@@ -9,7 +10,7 @@ public class Guitar extends Instrument implements IPlay, ISell {
     private double purchasePrice;
     private double sellPrice;
 
-    public Guitar(String type, String material, String section, int noOfStrings) {
+    public Guitar(String type, String material, Section section, int noOfStrings) {
         super(type, material, section);
         this.noOfStrings = noOfStrings;
         this.purchasePrice = 100;

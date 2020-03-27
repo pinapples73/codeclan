@@ -1,12 +1,14 @@
 package instruments;
 
+import enums.Section;
+
 public abstract class Instrument {
 
     private String type;
     private String material;
-    private String section;
+    private Section section;
 
-    public Instrument(String type, String material, String section) {
+    public Instrument(String type, String material, Section section) {
         this.type = type;
         this.material = material;
         this.section = section;
@@ -20,7 +22,7 @@ public abstract class Instrument {
         return material;
     }
 
-    public String getSection() {
+    public Section getSection() {
         return section;
     }
 }

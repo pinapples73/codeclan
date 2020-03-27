@@ -1,5 +1,6 @@
 package instruments;
 
+import enums.Section;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ public class GuitarTest {
 
     @Before
     public void before() {
-        guitar = new Guitar("acoustic", "wood", "string", 6);
+        guitar = new Guitar("acoustic", "wood", Section.STRING, 6);
     }
 
     @Test
