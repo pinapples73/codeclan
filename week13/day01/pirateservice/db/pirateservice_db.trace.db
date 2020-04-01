@@ -1,3 +1,0 @@
-2020-03-31 11:18:24 jdbc[13]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM PIRATES PIRATE_RAIDS SHIPS[*]"; SQL statement:
-SELECT * FROM PIRATES PIRATE_RAIDS SHIPS [42000-200]
