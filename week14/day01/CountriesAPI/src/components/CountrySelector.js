@@ -1,6 +1,7 @@
 import React from 'react';
 
 const CountrySelector = (props) => {
+
   const options = props.countries.map(country => {
     return <option value = {country.alpha3Code} key = {country.alpha3Code}> {country.name} </option>
   })

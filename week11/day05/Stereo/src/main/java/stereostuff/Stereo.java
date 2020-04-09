@@ -1,9 +1,12 @@
+package stereostuff;
+
+import behaviours.IConnect;
 import superclass.subclasses.CDPlayer;
 import superclass.subclasses.GraphicEQ;
 import superclass.subclasses.Radio;
 import superclass.subclasses.RecordDeck;
 
-public class Stereo {
+public class Stereo implements IConnect {
 
     private String stereoName;
     private int volume;
@@ -15,6 +18,10 @@ public class Stereo {
     public Stereo(String stereoName){
         this.stereoName = stereoName;
         this.volume = 5;
+    }
+
+    public String connect(){
+        return this.stereoName;
     }
 
     public void addRadio(String make, String model, String colour){

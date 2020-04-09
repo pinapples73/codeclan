@@ -16,7 +16,9 @@ public class Radio extends Component implements IPlay, IStop {
         this.channel = null;
     }
 
+
     public String tune(String channel){
+        this.channel = channel;
         return "You are tuned to " + channel + "!";
     }
 

@@ -6,8 +6,8 @@ public class GraphicEQ extends Component {
 
     private String EQSettings;
 
-    public GraphicEQ(String make, String model, String colour, String EQSettings){
+    public GraphicEQ(String make, String model, String colour){
         super(make, model, colour);
-        this.EQSettings = EQSettings;
+        this.EQSettings = "Too Jazzy";
     }
 }

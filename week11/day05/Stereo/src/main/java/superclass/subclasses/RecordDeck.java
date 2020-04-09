@@ -18,6 +18,7 @@ public class RecordDeck extends Component implements IPlay, IStop, ILoadMedia {
         this.isInUse = false;
     }
 
+
     public void play(){
         isInUse = true;
     }
@@ -26,9 +27,16 @@ public class RecordDeck extends Component implements IPlay, IStop, ILoadMedia {
         isInUse = false;
     }
 
-    public void loadMedia(String mediaName, String mediaType, int mediaSpeed){
-        recordOnDeck = mediaName;
-
+    public void loadMedia(String mediaName, String mediaType){
+        if(mediaType == "Album"){
+            playSpeed = 33;
+            recordOnDeck = mediaName;
+        } else if(mediaType == "Single") {
+            playSpeed = 45;
+            recordOnDeck = mediaName;
+        } else {
+            recordOnDeck = null;
+        }
     }
 
 }

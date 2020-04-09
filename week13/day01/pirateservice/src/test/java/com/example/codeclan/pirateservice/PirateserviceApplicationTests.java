@@ -6,9 +6,15 @@ import com.example.codeclan.pirateservice.models.Ship;
 import com.example.codeclan.pirateservice.repositories.PirateRepository;
 import com.example.codeclan.pirateservice.repositories.RaidRepository;
 import com.example.codeclan.pirateservice.repositories.ShipRepository;
+
+import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 class PirateserviceApplicationTests {
@@ -47,6 +53,33 @@ class PirateserviceApplicationTests {
 
 		raid1.addPirate(pirate1);
 		raidRepository.save(raid1);
+	}
+
+	@Test
+	public void canFindPirateByFirstName(){
+		List<Pirate> foundPirates = pirateRepository.findPirateByFirstName("Bartholomew");
+		assertEquals("Bartholomew", foundPirates.get(0).getFirstName());
+	}
+
+	@Test
+	public void canFindPiratesOverAge(){
+		List<Pirate> foundPirates = pirateRepository.findByAgeGreaterThan(35);
+	}
+
+	@Test
+	public void canFindPiratesOverAgeAndUnderAge(){
+		List<Pirate> foundPirates = pirateRepository.findByAgeGreaterThanEqualAndAgeLessThanEqual(35, 55);
+	}
+
+	@Test
+	public void canFindShipsByPiratesFirstName(){
+		List<Ship> foundShips = shipRepository.findByPiratesFirstName("Jack");
+
+	}
+
+	@Test
+	public void canFindRaidByShipName(){
+		List<Raid> foundRaids = raidRepository.findByPiratesShipName("The Black Pig");
 	}
 
 }

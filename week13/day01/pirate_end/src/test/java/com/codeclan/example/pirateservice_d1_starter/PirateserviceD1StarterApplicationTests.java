@@ -12,6 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PirateserviceD1StarterApplicationTests {
@@ -52,6 +56,17 @@ public class PirateserviceD1StarterApplicationTests {
 		raid1.addPirate(pirate1);
 		raidRepository.save(raid1);
 
+	}
+
+	@Test
+	public void canFindPirateByFirstName(){
+		List<Pirate> foundPirates = pirateRepository.findPirateByFirstName("Bartholomew");
+		assertEquals("Bartholomew", foundPirates.get(0).getFirstName());
+	}
+
+	@Test
+	public void canFindPiratesOverAge(){
+		List<Pirate> foundPirates = pirateRepository.findByAgeGreaterThan(35);
 	}
 
 }
